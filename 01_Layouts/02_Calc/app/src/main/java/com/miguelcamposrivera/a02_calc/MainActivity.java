@@ -39,5 +39,15 @@ public class MainActivity extends AppCompatActivity {
     public void deleteClicked(View view) {
         // Write the code to delete
         // the last char in the screen
+
+        // Examples
+        // 7435 <<<  743
+        // 0 <<< 0
+        String s = screen.getText().toString();
+        int lastIndex = s.length();
+        String del = s.substring(0,lastIndex-1);
+
+        screen.setText(del);
+
     }
 }
