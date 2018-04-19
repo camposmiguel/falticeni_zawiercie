@@ -7,13 +7,15 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/textViewPostsValue"
