@@ -54,6 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             i.putExtra("first_name", name);
             i.putExtra("last_name", surname);
+            i.putExtra("random_number",50);
             if(radioButtonId == R.id.radioMale) {
                 i.putExtra("sex", "male");
             } else {

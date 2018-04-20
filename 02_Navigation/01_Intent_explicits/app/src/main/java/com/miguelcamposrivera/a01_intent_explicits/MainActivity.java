@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         String name = extras.getString("first_name");
         String surname = extras.getString("last_name");
         String sex = extras.getString("sex");
+        int number = extras.getInt("random_number");
+    
 
         // Set the information into the TextView components
         tvName.setText(name);
