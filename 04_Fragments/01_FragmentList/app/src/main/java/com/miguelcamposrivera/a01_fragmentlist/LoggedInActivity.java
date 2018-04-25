@@ -63,6 +63,13 @@ public class LoggedInActivity extends AppCompatActivity
                 .resize(200,200)
                 .into(ivHeader);
 
+
+        // Include StudentFragment into the FrameLayout
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.fragmentContainer, new StudentFragment())
+                .commit();
+
     }
 
     @Override
