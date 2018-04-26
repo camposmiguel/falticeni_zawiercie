@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.miguelcamposrivera.a01_fragmentlist.dummy.DummyContent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentFragment extends Fragment {
@@ -43,8 +44,14 @@ public class StudentFragment extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
+            studentList = new ArrayList<>();
+            studentList.add(new Student("Andrei",17,"Harvard","https://d3iw72m71ie81c.cloudfront.net/male-77.jpg"));
+            studentList.add(new Student("Ionut",17,"Standford University","https://d3iw72m71ie81c.cloudfront.net/male-5.jpg"));
+            studentList.add(new Student("Karol",18,"MIT","https://d3iw72m71ie81c.cloudfront.net/male-83.jpg"));
+            studentList.add(new Student("Ilinca",17,"Oxford","https://d3iw72m71ie81c.cloudfront.net/female-72.jpg"));
+
             MyStudentRecyclerViewAdapter adapter = new MyStudentRecyclerViewAdapter(
-                    this,
+                    getActivity(),
                     R.layout.fragment_student,
                     studentList
             );
